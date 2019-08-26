@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+
+header{
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgb(244, 244, 248);
+    color:#f26463;
+    background-color: white;
+    box-shadow: 3px 2px 9px 2px rgba(244, 244, 248, 0.644);
+}
+
+.logo{
+    width: 15%; 
+}
+
+h1, h2, h3, ol{
+    text-align: center;
+}
+
+ol{
+    list-style-position: inside;
+}
+
+h2{
+    color: white;
+    background-color: #f26463;
+    padding: 0.1em;
+    letter-spacing: 0.03em;
+}
+
+h3{
+    color: #f26463;
+    letter-spacing: 0.03em;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #f26463;
+    border-color: #f26463;
+}
+  
+.btn-primary:hover {
+    color: #fff;
+    background-color: #cf3468;
+    border-color: #cf3468;
+}
+
+.rules-of-game{
+ background-color: #f3edf0;
+ padding: 1em;
+ border-radius: 8px; 
+ margin-bottom: -1em;  
+}
+
+.title-rules{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 0.05em;
+}
+
+.aquiparty{
+    text-transform: uppercase;
+    color: #ba417a;
+}
+
+.rules{
+    font-size: 0.9em;
+}
+
+.good-luck{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0.08em;
+    color: #ba417a;
+}
+
+/* ------------- 
+ ESPACE DE JEU
+---------------- */
+
+#space-game{
+    margin: auto;
+    width: 75%;
+}
+
+.game{
+    margin-top: -0.9em;
+    padding: 1.5em 0;
+    background-color: #eee;
+    z-index: 1;
+}
+
+table{
+    margin: auto;
+}
+
+#chrono{
+    position: relative;
+    width: 75%;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 2;
+    background-color: white;
+}
+
+.no-bold{
+    font-weight: 400;
+}
+
+img{
+    cursor:pointer;
+    margin: 10px 0;
+    width: 6em;
+}
+
+/* ---------------
+En cas de succès */
+
+#btn-playerSuccess{
+    text-align: center;
+}
+
+#success{
+    margin: auto;
+    width: 75%;
+}
+
+#success img{
+    display: block;
+    margin: auto;
+    width: 14em;
+}
+
+
+.displayedDiv{
+    display: none;
+}
+
+iframe{
+    border:none;
+    background-color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.form-actions button{
+    background-color: #ba417a;
+}
+
+iframe body{
+    background-color: #fff;
+}
+
+/*-----------
+EXTERN LINKS
+----------- */
+
+.other-website {
+    margin: 1em auto;
+    padding: 2em;
+    width: 75%;
+}
+
+
+a, a:hover, a:active, a:visited{
+    color: #f26463;
+    font-weight: bold;
+}
+
+
+
+/*-------
+ FOOTER 
+ ------ */
+footer{
+    background-color: #f26463;
+    color: white;
+    padding : 1em;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+ footer a , footer a:hover , footer a:focus , footer a:visited  {
+     color: #fff;
+ }
