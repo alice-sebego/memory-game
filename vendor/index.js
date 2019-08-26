@@ -37,9 +37,10 @@ const $successPlay = document.createElement("div");
 $successPlay.id = "success";
 
 // Création de l'image qui s'affichera en cas de succès
-const $imgSuccess = document.createElement("img");
+const $imgSuccess = document.createElement("div");
+$imgSuccess.id = "imgSuccess"
 
-$imgSuccess.src = "images/gif-confetti-aquiversaire.gif";
+$imgSuccess.innerHTML = '<iframe src="https://giphy.com/embed/xT0BKAB7vMb10rfnvG" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/puma-bolt-usain-puma-running-xT0BKAB7vMb10rfnvG">via GIPHY</a></p>';
 
 $successPlay.appendChild($imgSuccess);
 
@@ -92,7 +93,7 @@ function registerPlayOnSuccess(){
 
 	// Remplacer le contenu du chrono par Bravo
 	const $chrono = document.getElementById("chrono");
-	$chrono.style.backgroundColor = "#6a5497";
+	$chrono.style.backgroundColor = "#e5011c";
 	$chrono.style.color = "white";
 	document.getElementById("chrono").innerHTML = "Bravo !";
 	
