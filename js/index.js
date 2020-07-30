@@ -48,7 +48,7 @@ $successPlay.appendChild($imgSuccess);
     Création des fonctions
 ------------------------------------------*/
 
-for(let i = 0;i<imgCards.length;i++){
+for(let i = 0; i<imgCards.length ;i++){
 	//Ajout de la propriété noCard à l'objet img
 	imgCards[i].noCard=i; 
 	// Evenement au 1er clic du joueur
@@ -63,13 +63,11 @@ for(let i = 0;i<imgCards.length;i++){
 	}                      
 }
 
-initializeGame();
-
 /**
  * Affichage du tapis de cartes
  * @param {number} noCard 
  */
-function majDisplay(noCard){
+let majDisplay = (noCard) => {
 	
 	switch(stateCards[noCard]){
 		case 0:
@@ -89,7 +87,7 @@ function majDisplay(noCard){
  * Permettre au winner de valider 
  * son inscription pour le tirage au sort
  */
-function registerPlayOnSuccess(){
+let registerPlayOnSuccess = () => {
 
 	// Remplacer le contenu du chrono par Bravo
 	const $chrono = document.getElementById("chrono");
@@ -125,21 +123,22 @@ function registerPlayOnSuccess(){
  * Répartir les cartes non retournées
  * de manière aléatoire
  */
-function initializeGame(){
+let initializeGame = () => {
 
 	for(let position = patternsCards.length-1; position>=1; position--){
 		const chance = Math.floor(Math.random()*(position+1));
-		const save=patternsCards[position];
+		const save = patternsCards[position];
 		patternsCards[position] = patternsCards[chance];
 		patternsCards[chance] = save;
 	}
 }
 
+
 /**
  * Gestion d'une partie de la game
  * @param {number} noCard 
  */
-function controlGame(noCard){
+let controlGame = (noCard) => {
 
 	if(cardsReturned.length<2){
 
@@ -173,10 +172,12 @@ function controlGame(noCard){
 	}
 }
 
+initializeGame();
+
 /**
  * Fonction du chronomètre
  */
-function chrono() { 
+let chrono = () => { 
 	
 	if (sec < 59) {
 		sec++;
@@ -200,7 +201,7 @@ function chrono() {
  * stopper le jeu si dépassement du temps limité
  * puis recharger la page
  */
-function gameOver(){
+let gameOver = () => {
 	
 	clearInterval(timerID);
 	alert("GAME OVER :/ Clique sur OK pour rejouer");
