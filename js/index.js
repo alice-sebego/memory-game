@@ -12,7 +12,7 @@ const stateCards = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let cardsReturned = [];
 
 // Nombre de paires de cartes retournées avec succès
-let nbPairsFound=0;
+let nbPairsFound = 0;
 
 // Secondes du chronomètre
 let sec = 0;
@@ -190,8 +190,6 @@ function chrono() {
 	} 
 
 	document.getElementById("chrono").innerHTML = min +' '+ '<span class="no-bold">min</span>'+ ' '+':' +' '+ sec +' '+'<span class="no-bold">sec</span>';
-	console.log(sec +' '+ typeof sec);
-	console.log(min +' '+ typeof min);
 	
 	if(sec == 59 && min == 1){
 		gameOver();
