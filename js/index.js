@@ -12,7 +12,6 @@ while (stateCards.length < 16){
 	stateCards.push(value);
 }
 
-
 // Tableau où seront stockés les cartes retournées 
 let cardsReturned = [];
 
@@ -53,7 +52,7 @@ $successPlay.appendChild($imgSuccess);
     Création des fonctions
 ------------------------------------------*/
 
-for(let i = 0; i<imgCards.length ;i++){
+for(let i = 0; i<imgCards.length ; i++){
 	//Ajout de la propriété noCard à l'objet img
 	imgCards[i].noCard=i; 
 	// Evenement au 1er clic du joueur
@@ -144,7 +143,7 @@ let initializeGame = () => {
  */
 let controlGame = (noCard) => {
 
-	if(cardsReturned.length<2){
+	if(cardsReturned.length < 2){
 
 		if(stateCards[noCard] == 0){
 			stateCards[noCard] = 1;
@@ -155,7 +154,7 @@ let controlGame = (noCard) => {
 		if(cardsReturned.length == 2){
 			let newState = 0;
 			if(patternsCards[cardsReturned[0]] == patternsCards[cardsReturned[1]]){
-				newState =-1;
+				newState = -1;
 				nbPairsFound++;
 			}
 
