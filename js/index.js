@@ -6,7 +6,12 @@
 const patternsCards = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
 
 // Tableau des cartes non retournées
-const stateCards = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+const stateCards = [] ; 
+while (stateCards.length < 16){
+	const value = 0;
+	stateCards.push(value);
+}
+
 
 // Tableau où seront stockés les cartes retournées 
 let cardsReturned = [];
@@ -26,7 +31,7 @@ let norepeat = true; // Empêche le chrono de se répéter
 let timerID = 0;
 
 // Le tableau HTML où sont s'affichent les images des cartes à retourner
-const imgCards = document.getElementById("playground").getElementsByTagName("img");
+const imgCards = document.querySelectorAll("div.card > img");
 
 // Je guette la div contenant le jeu de carte
 const $game = document.getElementsByClassName("game");
@@ -57,7 +62,6 @@ for(let i = 0; i<imgCards.length ;i++){
 
 		if (norepeat == true) {
 			timerID = setInterval('chrono()', 1000);
-			console.log(timerID);
 			norepeat = false;
 		}
 	}                      
